@@ -16,13 +16,14 @@ alert(array5Random);
 
 setTimeout(comparePrompt, 3000);
 
+// eseguo comparazione numeri in array
 
 console.log(array5Random);
 console.log(arrayUtente);
 
 //Funzione genera numero casuale compreso tra min e max
 function generaNumero(min, max){
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 // qui la funzione per far comparire il prompt
 function comparePrompt(){
