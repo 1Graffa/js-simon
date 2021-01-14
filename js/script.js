@@ -6,10 +6,21 @@
 
 //genero dei numeri random assegnandoli ad un array
 var array5Random = [];
+var arrayUtente = [];
 for(var i = 0 ; i < 5; i++){
   array5Random.push(generaNumero(1,100));
 }
 alert(array5Random);
+setTimeout(comparePrompt, 3000);
+
+function comparePrompt(){
+  for(var i = 0 ; i < 5; i++){
+    arrayUtente.push(parseInt(prompt("inserisci un numero")));
+  }
+}
+
+console.log(array5Random);
+console.log(arrayUtente);
 
 
 // 4 L'utente per 30 secondi non vede nulla....e quindi cercherà immagino di ripetersi mentalmente i numeri
