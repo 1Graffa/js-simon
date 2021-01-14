@@ -7,6 +7,7 @@
 //creo i 2 array e genero dei numeri random assegnandoli a quelle dell'alert
 var array5Random = [];
 var arrayUtente = [];
+
 for(var i = 0 ; i < 5; i++){
   array5Random.push(generaNumero(1,100));
 }
@@ -29,5 +30,6 @@ function generaNumero(min, max){
 function comparePrompt(){
   for(var i = 0 ; i < 5; i++){
     arrayUtente.push(parseInt(prompt("inserisci un numero")));
+    
   }
 }
