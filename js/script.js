@@ -8,8 +8,11 @@
 var array5Random = [];
 var arrayUtente = [];
 
-for(var i = 0 ; i < 5; i++){
-  array5Random.push(generaNumero(1,100));
+while(array5Random.length < 5){
+  var numeroSingolo = generaNumero(1,100);
+  if (!array5Random.includes(numeroSingolo)){
+    array5Random.push(numeroSingolo);
+  }
 }
 alert(array5Random);
 
@@ -29,7 +32,8 @@ function generaNumero(min, max){
 // qui la funzione per far comparire il prompt
 function comparePrompt(){
   for(var i = 0 ; i < 5; i++){
-    arrayUtente.push(parseInt(prompt("inserisci un numero")));
-    
+    var numeroUtente= parseInt(prompt("inserisci un numero"))
+    arrayUtente.push(numeroUtente);
+
   }
 }
