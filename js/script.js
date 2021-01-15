@@ -29,11 +29,12 @@ console.log(arrayUtente);
 function generaNumero(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-// qui la funzione per far comparire il prompt
+// qui la funzione per far comparire il prompt e inserire i numeri, quelli che corrispondono a quelli dell'array random devono passare nell'arrayUtent
 function comparePrompt(){
   for(var i = 0 ; i < 5; i++){
-    var numeroUtente= parseInt(prompt("inserisci un numero"))
+    var numeroUtente= parseInt(prompt("inserisci un numero"));
+    if (array5Random.includes(numeroUtente)){
     arrayUtente.push(numeroUtente);
-
+    }
   }
 }
