@@ -7,6 +7,7 @@
 //creo i 2 array e genero dei numeri random assegnandoli a quelle dell'alert
 var array5Random = [];
 var arrayUtente = [];
+var numeroUtente;
 
 while(array5Random.length < 5){
   var numeroSingolo = generaNumero(1,100);
@@ -16,14 +17,13 @@ while(array5Random.length < 5){
 }
 alert(array5Random);
 
-// dopo la chiusura dell'alert parte il timeout di 3 secondi coi 5 comparePrompt
+// dopo la chiusura dell'alert parte il timeout di 30 secondi coi 5 comparePrompt
 
-setTimeout(comparePrompt, 3000);
-
-// eseguo comparazione numeri in array
+setTimeout(comparePrompt, 30000);
 
 console.log(array5Random);
 console.log(arrayUtente);
+
 
 //Funzione genera numero casuale compreso tra min e max
 function generaNumero(min, max){
@@ -33,8 +33,12 @@ function generaNumero(min, max){
 function comparePrompt(){
   for(var i = 0 ; i < 5; i++){
     var numeroUtente= parseInt(prompt("inserisci un numero"));
+  // eseguo comparazione numeri in array
     if (array5Random.includes(numeroUtente)){
     arrayUtente.push(numeroUtente);
-    }
+
   }
+  }
+  //comunicazione punteggio
+  alert(arrayUtente.length + " numeri indovinati su 5");
 }
